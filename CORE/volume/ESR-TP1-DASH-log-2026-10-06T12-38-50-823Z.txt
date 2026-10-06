@@ -1,0 +1,10 @@
+[12:36:44 PM | T+0.0s | media=0.0s] Experiment started; automatic ABR; target buffer 8-10 s
+[12:36:45 PM | T+0.4s | media=0.0s] Initial buffering
+[12:36:45 PM | T+0.7s | media=0.0s] Playback started
+[12:36:45 PM | T+0.7s | media=0.0s] Representation -> R3 (id=2) (2011 kbit/s)
+[12:37:31 PM | T+46.8s | media=46.1s] Representation -> R2 (id=1) (1005 kbit/s)
+[12:37:55 PM | T+70.9s | media=70.2s] Representation -> R1 (id=0) (502 kbit/s)
+[12:38:15 PM | T+90.7s | media=90.0s] Rebuffering during playback
+[12:38:15 PM | T+90.8s | media=90.0s] Playback resumed after rebuffering
+[12:38:28 PM | T+103.7s | media=102.9s] Representation -> R2 (id=1) (1005 kbit/s)
+[12:38:37 PM | T+112.2s | media=111.4s] Representation -> R3 (id=2) (2011 kbit/s)

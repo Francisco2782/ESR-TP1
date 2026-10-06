@@ -1,0 +1,57 @@
+# --- Network & Capture ---
+tcpdump
+wireshark
+# Wireshark CLI (tshark) is included in the wireshark package.
+# If you need the GUI, ensure your container has a display or use X11 forwarding.
+
+# --- Multimedia ---
+ffmpeg
+# ffprobe is included in the ffmpeg package.
+gpac
+# GPAC provides MP4Box and other DASH-related tools.
+python3-mpegdash
+# Python library for parsing MPEG-DASH MPD files.
+
+# --- Web Servers ---
+nginx
+# Caddy is installed separately in the Dockerfile because it's not in default
+# Ubuntu repos.
+
+# --- HTTP/2 & HTTP/3/QUIC Clients/Servers ---
+nghttp2-client
+nghttp2-server
+# ngtcp2 / nghttp3 command-line tools are NOT shipped as Debian/Ubuntu
+# packages. The runtime libraries you need for HTTP/3 come from either:
+#   * the fully static curl installed in the Dockerfile, or
+#   * the lab's bundled toolchain under tools/curl-http3/.
+# If you really need ngtcp2's example client/server, build them from source.
+curl
+# Ubuntu's curl lacks HTTP/3. The Dockerfile replaces it with a fully static
+# musl build that has HTTP/2 + HTTP/3.
+
+# --- Archive tools (needed to unzip the lab) ---
+unzip
+xz-utils
+
+# --- Auxiliary Tools ---
+git
+python3
+python3-pip
+netcat-openbsd
+iproute2
+net-tools
+vim
+nano
+htop
+sudo
+ca-certificates
+gnupg
+lsb-release
+software-properties-common
+build-essential
+libssl-dev
+libnghttp2-dev
+# libngtcp2-dev / ngtcp2-client / ngtcp2-server are not in Ubuntu 22.04's
+# repos. They are left out on purpose; the static curl already bundles its
+# QUIC stack. The -dev packages are useful if you need to compile your own
+# experiments.
